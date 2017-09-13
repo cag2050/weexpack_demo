@@ -192,7 +192,8 @@ QRCodeDraw.prototype = {
 
     //this interface kinda sucks - there is very small likelyhood of this ever being async
     this.QRVersion(text,options.errorCorrectLevel,options.version,function(e,t,l,ec){
-      text = t,level = l,error = e,errorCorrectLevel = ec;
+      // text = t,level = l,error = e,errorCorrectLevel = ec;
+      text = t,level = l,errorCorrectLevel = ec;
     });
 
     if(!level) {
@@ -226,7 +227,7 @@ QRCodeDraw.prototype = {
         }
       }
     } catch (e) {
-      error = e;
+      //error = e;
       console.log(e.stack);
     }
     
